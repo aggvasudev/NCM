@@ -1,0 +1,477 @@
+:root {
+  --color-default: #212529;
+  --color-primary: #ce1212;
+  --color-secondary: #37373f;
+}
+
+
+.header {
+  background: #E7E7E7;
+  transition: all 0.5s;
+  z-index: 997;
+  height: 50px;
+  padding-top: 1rem;
+}
+a {
+text-decoration: none;
+}
+@media (max-width: 575px) {
+  .header {
+    height: 70px;
+  }
+}
+/* .header .logo h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  font-family: "Montserrat";
+} */
+.navbar ul {
+  /* margin:inherit; */
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: left;
+  color: #000;
+}
+.navbar .nav-link{
+  padding: 0 10px;
+  font-size: 1.5rem;
+  color: #000;
+}
+.navbar>ul>li {
+  white-space: nowrap;
+  padding: 1px 0 10px 28px;
+}
+.navbar a{
+  color: #494949;
+}
+.navbar .nav-link:hover{
+  background-color: #E7E7E7;
+}
+.navbar .nav-link:hover{
+  color: #000;
+}
+
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+.hero {
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  min-height: 60vh;
+  padding: 70px 0 60px 0;
+}
+
+.hero h2 {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--color-secondary);
+  font-family:"Montserrat-black";
+}
+
+.hero .BEST {
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 4rem;
+  color: black;
+}
+.hero .img-fluid{
+  width: 80%
+}
+
+.hero p {
+  color: #4f4f5a;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.hero .btn-book-a-table {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 36px;
+  /* border-radius: 50px; */
+  transition: 0.5s;
+  color: #fff;
+  background: #26ADAB;
+  box-shadow: 0 8px 28px rgb(38, 173, 171);
+}
+.btn-book-a-table1{
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 12px 45px;
+  transition: 0.5s;
+  border-color: #26ADAB;
+  border-width: medium;
+  background-color: white;
+}
+#press {
+  background-color: #4f4f5a;
+  text-align: center;
+}
+.press-logo {
+  width: 15%;
+  margin: 10px 15px 10px;
+}
+.hero .WEB{
+  font-size: 6rem;
+  font-family: monospace;
+  color: #26ADAB;
+}
+
+.hero .btn-book-a-table:hover {
+  background: #3CD3D1;
+  box-shadow: 0 8px 28px #3CD3D1;
+}
+
+
+/* .navbar{
+ border-bottom-style: solid;
+ width :200%;
+} */
+.navbar .dropdown{
+  font-size: 1.5rem;
+}
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 28px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0px;
+  z-index: 99;
+  opacity: 0;
+  /* visibility: hidden; */
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  /* transition: 0.3s; */
+  border-radius: 6px;
+}
+.solutions1 {
+  visibility:hidden;
+}
+.solutions2 {
+  visibility:hidden;
+}
+
+
+.navbar .dropdown ul li {
+  min-width: 350px;
+}
+.navbar .dropdown ul li {
+  min-width: 350px;
+}
+.navbar .dropdown .dropdown ul li {
+  min-width: 400px;
+}
+
+.navbar .dropdown ul a {
+  padding: 4px 10px;
+  font-size: 20px;
+  text-transform: none;
+  font-weight: 200;
+  color: #000;
+}
+.navbar .dropdown .solutions{
+  min-width: 600px;
+}
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #028A82;
+}
+
+.navbar .dropdown ul {
+  opacity: 1;
+  top: 100%;
+  /* visibility: hidden; */
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+}
+.navbar .dropdown ul,
+.navbar .dropdown .dropdown ul {
+  position: static;
+  display: none;
+  padding: 10px 0;
+  margin: 10px 20px;
+  /* transition: all 0.5s ease-in-out; */
+  border: 1px solid #eee;
+}
+
+.navbar .dropdown>.dropdown-active,
+.navbar .dropdown .dropdown>.dropdown-active {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Gallery Section
+--------------------------------------------------------------*/
+.gallery {
+  overflow: hidden;
+}
+
+.gallery .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.gallery .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #d1d1d7;
+  opacity: 1;
+}
+
+.gallery .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #26ADAB;
+}
+
+.gallery .swiper-slide-active {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .gallery .swiper-wrapper {
+    padding: 40px 0;
+  }
+
+  .gallery .swiper-slide-active {
+    border: 6px solid #26ADAB;
+    padding: 4px;
+    background: #fff;
+    z-index: 1;
+    transform: scale(1.2);
+  }
+}
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact .info-item {
+  background: #f4f4f4;
+  padding: 30px;
+  height: 100%;
+}
+
+.contact .info-item .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  line-height: 0;
+  color: #fff;
+  background: #26ADAB;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.contact .info-item h3 {
+  font-size: 20px;
+  color: #6c757d;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.contact .info-item p {
+  padding: 0;
+  margin: 0;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.contact .info-item .social-links a {
+  font-size: 24px;
+  display: inline-block;
+  color: rgba(55, 55, 63, 0.7);
+  line-height: 1;
+  margin: 4px 6px 0 0;
+  transition: 0.3s;
+}
+
+.contact .info-item .social-links a:hover {
+  color: #26ADAB;
+}
+
+.contact .php-email-form {
+  width: 100%;
+  margin-top: 30px;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact .php-email-form .form-group {
+  padding-bottom: 20px;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #df1529;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #059652;
+  border-top-color: #fff;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: #26ADAB;
+}
+
+.contact .php-email-form input {
+  height: 48px;
+}
+
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+.contact .php-email-form button[type=submit] {
+  background: #26ADAB;
+  border: 0;
+  padding: 12px 40px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background: #ec2727;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Scroll top button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background: #26ADAB;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background: #ec2727;
+  color: #fff;
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  font-family: "Montserrat";
+  padding: 5px 10px;
+  margin-top: 0rem;
+  background-color: #D2DFDF;
+  width: 100%;
+
+}
+.footer a{
+  font-family: "Montserrat-bold";
+  padding: 1rem;
+  color: #000;
+  font-size: 1rem;
+}
+.footer a:hover{
+  color: #007CFF;
+  transition: 0.3s;
+}
+.footer .foot-c{
+  margin-top: 0.5rem;
+  color:#939393;
+}

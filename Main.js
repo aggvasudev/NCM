@@ -1,0 +1,3 @@
+function solutionsz(){
+    visibility: visible;
+}
