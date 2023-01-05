@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * Init swiper slider with 1 slide at once in desktop view
    */
   new Swiper('.slides-1', {
-    speed: 600,
+    speed: 500,
     loop: true,
     autoplay: {
       delay: 5000,
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
     speed: 600,
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 1000,
       disableOnInteraction: false
     },
     slidesPerView: 'auto',
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * Gallery Slider
    */
   new Swiper('.gallery-slider', {
-    speed: 400,
+    speed: 200,
     loop: true,
     centeredSlides: true,
     autoplay: {
