@@ -3,7 +3,10 @@
   --color-primary: #ce1212;
   --color-secondary: #37373f;
 }
-
+body {
+  background-image: url("assets/img/white-abstract-background.jpg");
+  background-repeat:repeat-y;
+}
 
 .header {
   background: #E7E7E7;
@@ -101,7 +104,7 @@ text-decoration: none;
   /* border-radius: 50px; */
   transition: 0.5s;
   color: #fff;
-  background: #26ADAB;
+  background: #00A5E3;
   box-shadow: 0 8px 28px rgb(38, 173, 171);
 }
 .btn-book-a-table1{
@@ -110,7 +113,7 @@ text-decoration: none;
   letter-spacing: 1px;
   padding: 12px 45px;
   transition: 0.5s;
-  border-color: #26ADAB;
+  border-color: #00A5E3;
   border-width: medium;
   background-color: white;
 }
@@ -124,12 +127,12 @@ text-decoration: none;
 .hero .WEB{
   font-size: 6rem;
   font-family: monospace;
-  color: #26ADAB;
+  color: #00A5E3;
 }
 
 .hero .btn-book-a-table:hover {
-  background: #3CD3D1;
-  box-shadow: 0 8px 28px #3CD3D1;
+  background: #00A5E3;
+  box-shadow: 0 8px 28px #00A5E3;
 }
 
 
@@ -190,9 +193,9 @@ text-decoration: none;
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #028A82;
+  color: #00A5E3;
   display: block;
-  background-color: #e7e7e7;
+  background-color: #f7f7f7;
 }
 
 .navbar .dropdown ul {
@@ -231,12 +234,15 @@ text-decoration: none;
 
 
 /*--------------------------------------------------------------
-# Portfolio
+# technology
 --------------------------------------------------------------*/
 .section-title1 {
   text-align: center;
   padding: 30px 0;
   position: relative;
+}
+.logos{
+  text-align: center;
 }
 
 .section-title1 h2 {
@@ -285,7 +291,7 @@ text-decoration: none;
 
 
 
-.portfolio #portfolio-flters {
+.technology #technology-flters {
   padding: 0;
   margin: 0 auto 25px auto;
   list-style: none;
@@ -293,7 +299,7 @@ text-decoration: none;
   border-radius: 50px;
 }
 
-.portfolio #portfolio-flters li {
+.technology #technology-flters li {
   cursor: pointer;
   display: inline-block;
   padding: 10px 15px;
@@ -305,21 +311,21 @@ text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
-  color: #16df7e;
+.technology #technology-flters li:hover,
+.technology #technology-flters li.filter-active {
+  color: #00A5E3;
 }
 
-.portfolio #portfolio-flters li:last-child {
+.technology #technology-flters li:last-child {
   margin-right: 0;
 }
 
-.portfolio .portfolio-item {
+.technology .technology-item {
   margin-bottom: 30px;
-  width: 15%
+  width: 13%
 }
 
-.portfolio .portfolio-item .portfolio-info {
+.technology .technology-item .technology-info {
   opacity: 0;
   position: absolute;
   left: 30px;
@@ -331,21 +337,21 @@ text-decoration: none;
   padding: 15px;
 }
 
-.portfolio .portfolio-item .portfolio-info h4 {
+.technology .technology-item .technology-info h4 {
   font-size: 18px;
   color: #fff;
   font-weight: 600;
   color: #5f687b;
 }
 
-.portfolio .portfolio-item .portfolio-info p {
+.technology .technology-item .technology-info p {
   color: #949cac;
   font-size: 14px;
   margin-bottom: 0;
 }
 
-.portfolio .portfolio-item .portfolio-info .preview-link,
-.portfolio .portfolio-item .portfolio-info .details-link {
+.technology .technology-item .technology-info .preview-link,
+.technology .technology-item .technology-info .details-link {
   position: absolute;
   right: 40px;
   font-size: 24px;
@@ -354,54 +360,54 @@ text-decoration: none;
   transition: 0.3s;
 }
 
-.portfolio .portfolio-item .portfolio-info .preview-link:hover,
-.portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #16df7e;
+.technology .technology-item .technology-info .preview-link:hover,
+.technology .technology-item .technology-info .details-link:hover {
+  color: #00A5E3;
 }
 
-.portfolio .portfolio-item .portfolio-info .details-link {
+.technology .technology-item .technology-info .details-link {
   right: 10px;
 }
 
-.portfolio .portfolio-item:hover .portfolio-info {
+.technology .technology-item:hover .technology-info {
   opacity: 1;
   bottom: 20px;
 }
 
 /*--------------------------------------------------------------
-# Portfolio Details
+# technology Details
 --------------------------------------------------------------*/
-.portfolio-details {
+.technology-details {
   padding-top: 40px;
 }
 
-.portfolio-details .portfolio-details-slider img {
+.technology-details .technology-details-slider img {
   width: 100%;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination {
+.technology-details .technology-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.technology-details .technology-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #16df7e;
+  border: 1px solid #00A5E3;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #16df7e;
+.technology-details .technology-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #00A5E3;
 }
 
-.portfolio-details .portfolio-info {
+.technology-details .technology-info {
   padding: 30px;
   box-shadow: 0px 0 30px rgba(95, 104, 123, 0.08);
 }
 
-.portfolio-details .portfolio-info h3 {
+.technology-details .technology-info h3 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -409,27 +415,27 @@ text-decoration: none;
   border-bottom: 1px solid #eee;
 }
 
-.portfolio-details .portfolio-info ul {
+.technology-details .technology-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.technology-details .technology-info ul li+li {
   margin-top: 10px;
 }
 
-.portfolio-details .portfolio-description {
+.technology-details .technology-description {
   padding-top: 30px;
 }
 
-.portfolio-details .portfolio-description h2 {
+.technology-details .technology-description h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.portfolio-details .portfolio-description p {
+.technology-details .technology-description p {
   padding: 0;
 }
 
@@ -439,6 +445,9 @@ text-decoration: none;
 --------------------------------------------------------------*/
 .services{
   padding: 2rem;
+}
+.services .section-title h2{
+  color: #00A5E3;
 }
 .services .icon1{
   position: static;
@@ -469,7 +478,7 @@ text-decoration: none;
 }
 
 .services .icon-box h4 a {
-  color: #37517e;
+  color: #00A5E3;
   transition: ease-in-out 0.3s;
 }
 
@@ -484,7 +493,7 @@ text-decoration: none;
 }
 
 .services .icon-box:hover h4 a {
-  color: #47b2e4;
+  color: #00A5E3;
 }
 
 
@@ -492,7 +501,8 @@ text-decoration: none;
 # Clientele Gallery Section
 --------------------------------------------------------------*/
 .events .container-fluid {
-  padding: 0;
+  padding-left: 20px;
+  /* padding-right: 20px; */
 }
 
 .events .event-item {
@@ -500,6 +510,12 @@ text-decoration: none;
   background-position: cente;
   min-height: 600px;
   padding: 30px;
+}
+.events .section-header h2{
+  color: #00A5E3;
+}
+.events .section-header{
+  padding-left: 4rem;
 }
 
 @media (max-width: 575px) {
@@ -559,18 +575,20 @@ text-decoration: none;
 }
 
 .events .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--color-primary);
+  background-color: #00A5E3;
 }
 
 /*--------------------------------------------------------------
 # OEMs Section
 --------------------------------------------------------------*/
 #press {
-  background-color: #E9E9E9;
+  /* background-image: url("assets/img/white-abstract-background.jpg"); */
   text-align: center;
 }
 .colored-section .section-header {
   padding: 2rem;
+  color: #00A5E3;
+  padding-left: 5rem;
 }
 .press-logo {
   width: 20%;
@@ -596,14 +614,15 @@ text-decoration: none;
 .be-our-partner .btn-partner {
   font-size: 2rem;
   text-align: center;
+  background-color: #00A5E3;
 }
 
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info {
-  border-top: 3px solid #47b2e4;
-  border-bottom: 3px solid #47b2e4;
+  border-top: 3px solid #00A5E3;
+  border-bottom: 3px solid #00A5E3;
   padding: 30px;
   background: #fff;
   width: 100%;
@@ -612,7 +631,7 @@ text-decoration: none;
 
 .contact .info i {
   font-size: 20px;
-  color: #47b2e4;
+  color: #00A5E3;
   float: left;
   width: 44px;
   height: 44px;
@@ -670,14 +689,14 @@ text-decoration: none;
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #47b2e4;
+  background: #00A5E3;
   color: #fff;
 }
 
 .contact .php-email-form {
   width: 100%;
-  border-top: 3px solid #47b2e4;
-  border-bottom: 3px solid #47b2e4;
+  border-top: 3px solid #00A5E3;
+  border-bottom: 3px solid #00A5E3;
   padding: 30px;
   background: #fff;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
@@ -711,7 +730,7 @@ text-decoration: none;
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #18d26e;
+  background: #00A5E3;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -755,7 +774,7 @@ text-decoration: none;
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: #47b2e4;
+  border-color: #00A5E3;
 }
 
 .contact .php-email-form input {
@@ -767,7 +786,7 @@ text-decoration: none;
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #47b2e4;
+  background: #00A5E3;
   border: 0;
   padding: 12px 34px;
   color: #fff;
@@ -816,7 +835,7 @@ text-decoration: none;
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #26ADAB;
+  background: #00A5E3;
   width: 44px;
   height: 44px;
   border-radius: 50px;
