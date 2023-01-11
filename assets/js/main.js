@@ -31,6 +31,32 @@ document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
   /**
+  * Easy selector helper function
+  */
+ const select = (el, all = false) => {
+   el = el.trim()
+   if (all) {
+     return [...document.querySelectorAll(el)]
+   } else {
+     return document.querySelector(el)
+   }
+ }
+
+ /**
+   * Easy event listener function
+   */
+  const on = (type, el, listener, all = false) => {
+    let selectEl = select(el, all)
+    if (selectEl) {
+      if (all) {
+        selectEl.forEach(e => e.addEventListener(type, listener))
+      } else {
+        selectEl.addEventListener(type, listener)
+      }
+    }
+  }
+
+  /**
    * Preloader
    */
   const preloader = document.querySelector('#preloader');
@@ -96,6 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileNavHide.classList.toggle('d-none');
   }
 
+
+
+
   /**
    * Hide mobile nav on same-page/hash links
    */
@@ -134,6 +163,67 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /**
+   * Initiate glightbox
+   */
+  const glightbox = GLightbox({
+    selector: '.glightbox'
+  });
+
+
+  /**
+    * Porfolio isotope and filter
+    */
+   window.addEventListener('load', () => {
+     let portfolioContainer = select('.portfolio-container');
+     if (portfolioContainer) {
+       let portfolioIsotope = new Isotope(portfolioContainer, {
+         itemSelector: '.portfolio-item'
+       });
+
+       let portfolioFilters = select('#portfolio-flters li', true);
+
+       on('click', '#portfolio-flters li', function(e) {
+         e.preventDefault();
+         portfolioFilters.forEach(function(el) {
+           el.classList.remove('filter-active');
+         });
+         this.classList.add('filter-active');
+
+         portfolioIsotope.arrange({
+           filter: this.getAttribute('data-filter')
+         });
+
+       }, true);
+     }
+
+   });
+
+
+  /**
+   * Initiate portfolio lightbox
+   */
+  const portfolioLightbox = GLightbox({
+    selector: '.portfolio-lightbox'
+  });
+
+  /**
+   * Portfolio details slider
+   */
+  new Swiper('.portfolio-details-slider', {
+    speed: 400,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    }
+  });
+
+  /**
    * Scroll top button
    */
   const scrollTop = document.querySelector('.scroll-top');
@@ -149,17 +239,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
   }
 
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
 
-  /**
-   * Initiate pURE cOUNTER
-   */
-  new PureCounter();
+
 
   /**
    * Init swiper slider with 1 slide at once in desktop view
@@ -216,39 +297,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /**
-   * Gallery Slider
-   */
-  new Swiper('.gallery-slider', {
-    speed: 200,
-    loop: true,
-    centeredSlides: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      },
-      992: {
-        slidesPerView: 5,
-        spaceBetween: 20
-      }
-    }
-  });
-
-  /**
    * Animation on scroll function and init
    */
   function aos_init() {
@@ -263,4 +311,9 @@ document.addEventListener('DOMContentLoaded', () => {
     aos_init();
   });
 
-});
+  /**
+   * Initiate pURE cOUNTER
+   */
+  new PureCounter();
+
+})()
