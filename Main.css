@@ -316,6 +316,7 @@ text-decoration: none;
 
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+  width: 15%
 }
 
 .portfolio .portfolio-item .portfolio-info {
