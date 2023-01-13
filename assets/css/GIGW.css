@@ -171,13 +171,13 @@ text-decoration: none;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   max-height: 500px;
   /* padding:100px 200px; */
 }
 .banner h1{
     position: relative;
-    color: #000;
+    color: #fff;
     font-size: 3rem;
     line-height: 0.9;
     padding-top: 40px;
@@ -185,13 +185,14 @@ text-decoration: none;
     text-align: center;
 }
 .banner p{
+  font-family: cursive;
     position: relative;
-    color: #000;
-    font-size: 1.5rem;
-    line-height: 0.9;
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1.1;
     /* padding-top: 40px; */
     /* padding-bottom: 10px; */
-    padding: 2rem 4rem;
+    padding: 2rem 6rem;
     text-align: Left;
 }
 
@@ -202,10 +203,15 @@ text-decoration: none;
 .work-sample img{
   width: 30%;
   padding: 1rem;
+  border-radius: 25px;
 }
 .work-sample{
+  background-image: url("../img/work-sample.jpg");
   text-align: center;
-  margin-top: 40px;
+  Padding-top: 45px;
+  color: #fff;
+  padding-bottom: 100px;
+  height: 70vh;
 }
 
 
