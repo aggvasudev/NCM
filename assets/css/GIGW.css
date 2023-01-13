@@ -1,0 +1,478 @@
+:root {
+  --color-default: #212529;
+  --color-primary: #ce1212;
+  --color-secondary: #37373f;
+}
+
+
+.top-margin{
+  margin-top: 65px;
+}
+.header {
+  background: #E7E7E7;
+  transition: all 0.5s;
+  z-index: 997;
+  height: 65px;
+  padding-top: 1.5rem;
+}
+a {
+text-decoration: none;
+}
+@media (max-width: 575px) {
+  .header {
+    height: 70px;
+  }
+}
+/* .header .logo h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  font-family: "Montserrat";
+} */
+.navbar ul {
+  /* margin:inherit; */
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: left;
+  color: #000;
+}
+.navbar .nav-link{
+  padding: 0 10px;
+  font-size: 1.5rem;
+  color: #000;
+}
+.navbar>ul>li {
+  white-space: nowrap;
+  padding: 1px 0 10px 28px;
+}
+.navbar a{
+  color: #494949;
+}
+/* .navbar .nav-link:hover{
+  position:static;
+  z-index: 500;
+  background-color: red;
+} */
+.navbar .nav-link:hover{
+  color: #000;
+}
+
+/* .navbar{
+ border-bottom-style: solid;
+ width :200%;
+} */
+/* .navbar .ncmlogo{
+  width:100%;
+} */
+.navbar .dropdown{
+  font-size: 1.5rem;
+}
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 28px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0px;
+  z-index: 99;
+  opacity: 0;
+  /* visibility: hidden; */
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  /* transition: 0.3s; */
+  border-radius: 6px;
+}
+.solutions1 {
+  visibility:hidden;
+}
+.solutions2 {
+  visibility:hidden;
+}
+
+
+.navbar .dropdown ul li {
+  min-width: 350px;
+}
+.navbar .dropdown ul li {
+  min-width: 350px;
+}
+.navbar .dropdown .dropdown ul li {
+  min-width: 400px;
+}
+
+.navbar .dropdown ul a {
+  padding: 4px 10px;
+  font-size: 20px;
+  text-transform: none;
+  font-weight: 200;
+  color: #000;
+}
+.navbar .dropdown .solutions{
+  min-width: 600px;
+}
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #00A5E3;
+  display: block;
+  background-color: #f7f7f7;
+}
+
+.navbar .dropdown ul {
+  opacity: 1;
+  top: 100%;
+  /* visibility: hidden; */
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+}
+.navbar .dropdown ul,
+.navbar .dropdown .dropdown ul {
+  position: static;
+  display: none;
+  padding: 10px 0;
+  margin: 10px 20px;
+  /* transition: all 0.5s ease-in-out; */
+  border: 1px solid #eee;
+}
+
+.navbar .dropdown>.dropdown-active,
+.navbar .dropdown .dropdown>.dropdown-active {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Banner Section
+--------------------------------------------------------------*/
+
+.banner::before {
+  content: "";
+  background-image: url("../img/conference.jpg");
+  background-repeat:no-repeat;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+  max-height: 500px;
+  /* padding:100px 200px; */
+}
+.banner h1{
+    position: relative;
+    color: #000;
+    font-size: 3rem;
+    line-height: 0.9;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.banner p{
+    position: relative;
+    color: #000;
+    font-size: 1.5rem;
+    line-height: 0.9;
+    /* padding-top: 40px; */
+    /* padding-bottom: 10px; */
+    padding: 2rem 4rem;
+    text-align: Left;
+}
+
+
+/*--------------------------------------------------------------
+# Work Sample Section
+--------------------------------------------------------------*/
+.work-sample img{
+  width: 30%;
+  padding: 1rem;
+}
+.work-sample{
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact .info {
+  border-top: 3px solid #00A5E3;
+  border-bottom: 3px solid #00A5E3;
+  padding: 30px;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+}
+
+.contact .info i {
+  font-size: 20px;
+  color: #00A5E3;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #e7f5fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #37517e;
+}
+
+.contact .info p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #6182ba;
+}
+
+.contact .info .email p {
+  padding-top: 5px;
+}
+
+.contact .info .social-links {
+  padding-left: 60px;
+}
+
+.contact .info .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.contact .info .social-links a:hover {
+  background: #47b2e4;
+  color: #fff;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+  background: #00A5E3;
+  color: #fff;
+}
+
+.contact .php-email-form {
+  width: 100%;
+  border-top: 3px solid #00A5E3;
+  border-bottom: 3px solid #00A5E3;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+.contact .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #00A5E3;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact .php-email-form label {
+  padding-bottom: 8px;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: #00A5E3;
+}
+
+.contact .php-email-form input {
+  height: 44px;
+}
+
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+.contact .php-email-form button[type=submit] {
+  background: #00A5E3;
+  border: 0;
+  padding: 12px 34px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background: #209dd8;
+}
+.contact .section-title {
+  font-family: inherit;
+}
+
+#contact {
+  padding: 4rem;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Scroll top button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background: #00A5E3;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background: #ec2727;
+  color: #fff;
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  font-family: inherit;
+  padding: 5px 10px;
+  margin-top: 0rem;
+  background-color: #D2DFDF;
+  width: 100%;
+
+}
+.footer a{
+  font-family: inherit;
+  padding: 1rem;
+  color: #000;
+  font-size: 1rem;
+}
+.footer a:hover{
+  color: #007CFF;
+  transition: 0.3s;
+}
+.footer .foot-c{
+  margin-top: 0.5rem;
+  color:#939393;
+}
