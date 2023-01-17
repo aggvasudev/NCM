@@ -1,48 +1,88 @@
 /**
-* Template Name: Yummy - v1.3.0
-* Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Template Name: Yummy - v1.3.0
+ * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
 function solutions1() {
   hidec();
   var element = document.getElementById("b");
   element.classList.toggle("solutions1");
 }
+
 function solutions2() {
+  dropdown_web()
   hideb();
   var element = document.getElementById("c");
   element.classList.toggle("solutions2");
+  // document.getElementById("web1").classList.remove("drop-down");
+  // document.getElementById("mob1").classList.remove("drop-down");
+  // document.getElementById("cld1").classList.remove("drop-down");
 }
 
-function hidec()  {
+function hidec() {
   document.getElementById("c").classList.add("solutions2");
 }
-function hideb()  {
+
+function hideb() {
   document.getElementById("b").classList.add("solutions1");
 }
+
 function hiding() {
-    hidec();
-    hideb();
+  hidec();
+  hideb();
 }
+
+
+function dropdown_web() {
+  document.getElementById("drop_mobile").classList.add("dropdown-mobile");
+  document.getElementById("mob1").classList.remove("drop-down");
+  document.getElementById("cld1").classList.remove("drop-down");
+  document.getElementById("web1").classList.add("drop-down");
+  document.getElementById("drop_cloud").classList.add("dropdown-cloud");
+  document.getElementById("drop_web").classList.remove("dropdown-web");
+}
+
+function dropdown_mobile() {
+  // var element = document.getElementById("drop_mobile");
+  // element.classList.toggle("dropdown-mobile");
+  document.getElementById("drop_web").classList.add("dropdown-web");
+  document.getElementById("mob1").classList.add("drop-down");
+  document.getElementById("web1").classList.remove("drop-down");
+  document.getElementById("cld1").classList.remove("drop-down");
+  document.getElementById("drop_cloud").classList.add("dropdown-cloud");
+  document.getElementById("drop_mobile").classList.remove("dropdown-mobile");
+}
+
+function dropdown_cloud() {
+  // var element = document.getElementById("drop_cloud");
+  // element.classList.toggle("dropdown-cloud");
+  document.getElementById("drop_web").classList.add("dropdown-web");
+  document.getElementById("cld1").classList.add("drop-down");
+  document.getElementById("web1").classList.remove("drop-down");
+  document.getElementById("mob1").classList.remove("drop-down");
+  document.getElementById("drop_mobile").classList.add("dropdown-mobile");
+  document.getElementById("drop_cloud").classList.remove("dropdown-cloud");
+}
+// document.getElementById("drop_web").classList.toggle("dropdown-web");
 
 
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
   /**
-  * Easy selector helper function
-  */
- const select = (el, all = false) => {
-   el = el.trim()
-   if (all) {
-     return [...document.querySelectorAll(el)]
-   } else {
-     return document.querySelector(el)
-   }
- }
+   * Easy selector helper function
+   */
+  const select = (el, all = false) => {
+    el = el.trim()
+    if (all) {
+      return [...document.querySelectorAll(el)]
+    } else {
+      return document.querySelector(el)
+    }
+  }
 
- /**
+  /**
    * Easy event listener function
    */
   const on = (type, el, listener, all = false) => {
@@ -171,32 +211,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /**
-    * Porfolio isotope and filter
-    */
-   window.addEventListener('load', () => {
-     let technologyContainer = select('.technology-container');
-     if (technologyContainer) {
-       let technologyIsotope = new Isotope(technologyContainer, {
-         itemSelector: '.technology-item'
-       });
+   * Porfolio isotope and filter
+   */
+  window.addEventListener('load', () => {
+    let technologyContainer = select('.technology-container');
+    if (technologyContainer) {
+      let technologyIsotope = new Isotope(technologyContainer, {
+        itemSelector: '.technology-item'
+      });
 
-       let technologyFilters = select('#technology-flters li', true);
+      let technologyFilters = select('#technology-flters li', true);
 
-       on('click', '#technology-flters li', function(e) {
-         e.preventDefault();
-         technologyFilters.forEach(function(el) {
-           el.classList.remove('filter-active');
-         });
-         this.classList.add('filter-active');
+      on('click', '#technology-flters li', function(e) {
+        e.preventDefault();
+        technologyFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
+        });
+        this.classList.add('filter-active');
 
-         technologyIsotope.arrange({
-           filter: this.getAttribute('data-filter')
-         });
+        technologyIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
 
-       }, true);
-     }
+      }, true);
+    }
 
-   });
+  });
 
 
   /**
