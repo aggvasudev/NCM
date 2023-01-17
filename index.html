@@ -35,11 +35,8 @@
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex">
-    <div class="d-flex align-items-center">
 
-      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
-        <h1>Payme</h1>
-      </a> -->
+    <div class="d-flex align-items-center">
 
       <nav id="navbar" class="navbar col-lg-5">
         <ul>
@@ -57,18 +54,32 @@
               <li><a href="#">Single Window System </a></li>
             </ul>
           </li>
-          <li class="dropdown nav-link"><a onclick="solutions2()" href="#"><span>Technologies</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown-tech nav-link"><a onclick="solutions2()"><span>Technologies</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul id="c" class="solutions2">
-              <li><a href="#">Web</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
+              <li id="web1" class="drop-down dropdown-web1"><a onclick="dropdown_web()"><span>Web</span><i class="bi bi-chevron-right dropdown-indicator"></i></a>
+                <ul id="drop_web" class="dropdown-web">
                   <li><a href="#">Open Source Technology</a></li>
                   <li><a href="#">Microsoft Technology</a></li>
                   <li><a href="#">Java</a></li>
                 </ul>
               </li>
-              <li><a href="#">Mobile </a></li>
-              <li><a href="#">Cloud </a></li>
+              <li id="mob1" class="drop-down dropdown-mob"><a onclick="dropdown_mobile()"><span>Mobile</span> <i class="bi bi-chevron-right dropdown-indicator"></i></a>
+                <ul id="drop_mobile" class="dropdown-mobile">
+                  <li><a href="#">IOS</a></li>
+                  <li><a href="#">Android</a></li>
+                  <li><a href="#">Xamarin</a></li>
+                  <li><a href="#">Ionic</a></li>
+                  <li><a href="#">Flutter</a></li>
+                  <li><a href="#">React native</a></li>
+                </ul>
+              </li>
+              <li id="cld1" class="drop-down dropdown-cld"><a onclick="dropdown_cloud()"><span>Cloud</span> <i class="bi bi-chevron-right dropdown-indicator"></i></a>
+                <ul id="drop_cloud" class="dropdown-cloud">
+                  <li><a href="#">Cloud</a></li>
+                  <li><a href="#">Cloud</a></li>
+                  <li><a href="#">Cloud</a></li>
+                </ul>
+              </li>
               <li><a href="#">Machine Language </a></li>
               <li><a href="#">Artificial Language </a></li>
               <li><a href="#">Blockchain</a></li>
@@ -81,12 +92,11 @@
           <li class="nav-link"><a href="#press">OEM Partners</a></li>
           <li class="nav-link"><a href="#contact">Contact Us</a></li>
         </ul>
+
       </nav>
   </header><!-- End Header -->
 
-
-
-  <div onclick="hiding()">
+  <div class="top-margin" onclick="hiding()">
 
 
     <!-- ======= Hero Section ======= -->
@@ -99,7 +109,7 @@
             <p data-aos="fade-up">Letter of on become he tended active enable to. Vivinity relation sensible <br> sociable surprise screened no us as.</p>
             <div class="d-flex" data-aos="fade-up">
               <a href="#" class="btn-book-a-table">Get Started</a>
-              <button type="button" class="btn-book-a-table1 btn-outline">Explore</button>
+              <button type="button" class="Explore btn-outline">Explore</button>
             </div>
           </div>
           <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
@@ -166,9 +176,6 @@
           <div class="col-lg-4 col-md-6 technology-item filter-mobile">
             <img src="assets/img/technology/ionic.png" class="img-fluid" alt="">
           </div>
-          <!-- <div class="col-lg-4 col-md-6 technology-item filter-java">
-            <img src="assets/img/technology/struts.png" class="img-fluid" alt="">
-          </div> -->
           <div class="col-lg-4 col-md-6 technology-item filter-front_end">
             <img src="assets/img/technology/css.png" class="img-fluid" alt="">
           </div>
@@ -202,9 +209,6 @@
           <div class="col-lg-4 col-md-6 technology-item filter-microsoft">
             <img src="assets/img/technology/SharePoint.png" class="img-fluid" alt="">
           </div>
-          <!-- <div class="col-lg-4 col-md-6 technology-item filter-open_source">
-            <img src="assets/img/technology/wordpress.png" class="img-fluid" alt="">
-          </div> -->
         </div>
         <div class="click-contact text-center">
           <p>DON'T SEE WHAT YOU'RE LOOKING FOR? WE'RE <a href="#contact">Just a Click</a> AWAY</p>
